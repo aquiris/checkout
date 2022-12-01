@@ -1,7 +1,16 @@
-<p align="center">
-  <a href="https://github.com/actions/checkout"><img alt="GitHub Actions status" src="https://github.com/actions/checkout/workflows/test-local/badge.svg"></a>
-</p>
+# Aquiris Fork of Checkout V3
+This fork has tag `V3` of original repository merged with the changes from [#388](https://github.com/actions/checkout/pull/388) properly merged and built, allowing for the action to checkout **at any folder, not only inside the workspace** 
 
+## Usage
+```yaml
+- name: Checkout
+  uses: actions/checkout@v3
+  with:
+    repository: my-org/my-tools
+    path: "C:/projects/myfolder"
+```
+
+## Original README follows
 # Checkout V3
 
 This action checks-out your repository under `$GITHUB_WORKSPACE`, so your workflow can access it.
